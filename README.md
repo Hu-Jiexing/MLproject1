@@ -15,7 +15,8 @@ Linear Support Vector Classifier (SVC)
 Polynomial SVC  
 RBF SVC  
 Each SVC model (linear, poly, RBF) after RFE  
-Currently unsure about GridSearch and RandomizedSearch for SVC models since both take a long time
+Currently unsure about GridSearch and RandomizedSearch for SVC models since both take a long time  
+If able to run, will put best performing SVC model with parameters from GridSearch and RandomizedSearch
 
 Random Forest (RF)  
 RF after RFE  
