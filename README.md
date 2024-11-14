@@ -26,13 +26,14 @@ RF after RandomSearch
 
 New proposed structure:
 
+
 Initial decision tree (DT)  
 Tuned DT (GridSearch and/or RandomSearch)  
 DT after Feature Selection (RFE)  
 Tuned DT (RFE)
 
-Best initial SVC model (either linear, poly, rbf)
-Tuned SVC model (probably using GridSearch)
+Best initial SVC model (either linear, poly, rbf)  
+Tuned SVC model (probably using GridSearch)  
 SVC model (after Feature Selection + GridSearch)
 
 
