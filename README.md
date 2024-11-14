@@ -17,7 +17,7 @@ RBF SVC
 Each SVC model (linear, poly, RBF) after RFE  
 Currently unsure about GridSearch and RandomizedSearch for SVC models since both take a long time
 
-Random Forest (RF)
-RF after RFE
+Random Forest (RF)  
+RF after RFE  
 RF after GridSearch (Didn't let it run to completion yet)  
 RF after RandomSearch
