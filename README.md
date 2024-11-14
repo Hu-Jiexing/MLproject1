@@ -23,9 +23,7 @@ RF after RFE
 RF after GridSearch (Didn't let it run to completion yet)  
 RF after RandomSearch
 
-
-
-
+<br><br><br>
 New proposed structure:
 
 
