@@ -1,0 +1,46 @@
+# Import libraries
+import os 
+import numpy as np
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import train_test_split
+from sklearn.model_selection import StratifiedKFold as sk
+from sklearn.preprocessing import StandardScaler
+from sklearn.metrics import classification_report
+from sklearn.metrics import confusion_matrix
+from sklearn import datasets
+from sklearn.metrics import accuracy_score as acs
+from sklearn.tree import export_graphviz
+from matplotlib.colors import ListedColormap
+from sklearn.model_selection import KFold, cross_val_score
+from sklearn.tree import DecisionTreeClassifier
+
+
+df = pd.read_csv('cleaneddata.csv')
+
+# Convert to data frame
+X = df.drop('Condition', axis=1)  # Features (dropping the target 'Condition')
+y = df['Condition']               # Target column
+
+# Get feature names from DataFrame columns
+feature_names = X.columns.tolist()
+
+# Define class names dynamically based on unique values in 'Condition'
+class_names = y.unique().astype(str).tolist()  # Automatically get class names from target
+
+# Initialize the model
+model = DecisionTreeClassifier()
+
+# Set up K-Fold Cross-Validation
+k = 4  # You can change this to any number of folds, e.g., 10
+kf = KFold(n_splits=k, shuffle=True, random_state=42)
+
+# Perform K-Fold Cross-Validation
+cv_scores = cross_val_score(model, X, y, cv=kf)
+
+# Print the results
+print(f'k value: {k}')
+print(f'Average Cross-Validation Score: {np.mean(cv_scores)}')
+print(f'Cross-Validation Scores for each fold: {cv_scores}')
