@@ -41,3 +41,21 @@ Initial Random Forest (RF)
 Tuned RF (GridSearch and/or RandomSearch)  
 RF after Feature Selection (RFE)  
 Tuned RF (RFE)
+
+<br><br>
+**Current v1 draft:**
+<br>
+
+Initial DT  
+Tuned DT with GridSearch  
+DT after RFE  
+Tuned RFE DT with GridSearch
+
+3 initial SVM models (linear, poly, rbf) —> should be including only rbf in final draft since it performs the best among initial models  
+Tuned SVM model using GridSearch  
+Tuned SVM model using RandomSearch  
+Tuned RFE SVM model using GridSearch  
+
+Initial RF model  
+Tuned RF model using GridSearch  
+Tuned RFE RF model using GridSearch
